@@ -2,9 +2,9 @@
 import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
-import {useMenus} from '@/composables/useMenus'
+import { useMenus } from '@/composables/useMenus'
 
-const {allMenus, getAllMenus} = useMenus()
+const { allMenus, getAllMenus, handleDelete } = useMenus()
 
 const router = useRouter()
 
@@ -26,9 +26,13 @@ getAllMenus()
       <el-table-column prop="level" label="菜单层级" align="center" width="180" />
       <el-table-column prop="icon" label="菜单图标" align="center" />
       <el-table-column prop="orderNum" label="排序" align="center" />
-      <el-table-column label="操作" align="center">
-        <el-button type="primary">编辑</el-button>
-        <el-button type="danger">删除</el-button>
+      <el-table-column label="操作" align="center" v-slot="scope">
+        <el-button
+          type="primary"
+          @click="router.push({ name: 'menu-edit', params: { id: scope.row.id } })"
+          >编辑</el-button
+        >
+        <el-button type="danger" @click="handleDelete(scope.row.id)">删除</el-button>
       </el-table-column>
     </el-table>
   </el-card>

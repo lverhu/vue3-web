@@ -1,4 +1,5 @@
 import request from "@/utils/request";
+import MenuItem from "element-plus/es/components/menu/src/utils/menu-item.mjs";
 
 // 定义类型
 type Common<T> = {
@@ -36,7 +37,7 @@ export const getAll = () => {
 //部分？
 // type CreateOrEditMenu = Partial<MenuItem>
 //挑选，要什么
-type CreateOrEditMenu = Pick<
+export type CreateOrEditMenu = Pick<
     MenuItem,
     "id" | "parentId" | "name" | "href" | "icon" | "orderNum" | "description" | "shown"
 > & { id?: number }
@@ -47,9 +48,39 @@ type CreateOrEditMenu = Pick<
 // > & { id?: number }
 // 保存或更新菜单
 export const saveOrUpdate = (menuInfo: CreateOrEditMenu) => {
-    return request({
+    return request<Common<boolean>>({
         method: 'POST',
         url: '/boss/menu/saveOrUpdate',
         data: menuInfo
+    })
+}
+
+// 删除菜单
+export const deleteMenu = (id: number) => {
+    console.log(id)
+    return request<Common<boolean>>({
+        method: 'DELETE',
+        url: `/boss/menu/${id}`,
+    })
+}
+
+type SubMenuList = MenuItem & {
+    subMenuList: SubMenuList[] | null
+}
+
+type EditMenuInfo = Common<{
+    menuInfo: MenuItem
+    parentMenuList: SubMenuList[]
+}>
+
+// 获取指定id的菜单信息
+export const getEditMenuInfo = (id: number) => {
+    console.log(id)
+    return request<EditMenuInfo>({
+        method: 'GET',
+        url: '/boss/menu/getEditMenuInfo',
+        params: {
+            id,
+        },
     })
 }

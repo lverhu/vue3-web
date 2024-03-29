@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 import { ElMessage, FormInstance, FormRules } from 'element-plus'
-import { login } from '@/utils/users'
+import { login } from '@/api/users'
 import { useTokenStore } from '@/stores/mytoken'
 import { useRouter, useRoute } from 'vue-router'
 

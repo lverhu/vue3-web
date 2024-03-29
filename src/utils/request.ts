@@ -1,6 +1,6 @@
 import axios, { type AxiosRequestHeaders } from "axios";
 import { useTokenStore } from "@/stores/mytoken";
-import { refreshToken } from "./users";
+import { refreshToken } from "@/api/users";
 import { useRouter } from "vue-router";
 import { ElMessage } from "element-plus";
 

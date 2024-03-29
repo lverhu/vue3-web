@@ -1,4 +1,4 @@
-import request from "./request";
+import request from "../utils/request";
 import { useTokenStore } from "@/stores/mytoken";
 
 // 用户登陆-参数类型

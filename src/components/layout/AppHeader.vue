@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { isCollapse } from './menu-collapse'
 import { reactive, ref, toRefs } from 'vue'
-import { getInfo, logout } from '@/utils/users'
+import { getInfo, logout } from '@/api/users'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { useTokenStore } from '@/stores/mytoken'
 import { useRouter } from 'vue-router'

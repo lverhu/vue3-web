@@ -34,6 +34,11 @@ const router = createRouter({
           component: () => import("@/views/menu/CreateOrEdit.vue")
         },
         {
+          path: '/menus/:id/edit',
+          name: 'menu-edit',
+          component: () => import("@/views/menu/CreateOrEdit.vue")
+        },
+        {
           path: "/:xxx(.*)*",
           name: "ErrorPage",
           component: () => import("@/views/ErrorPage.vue"),
