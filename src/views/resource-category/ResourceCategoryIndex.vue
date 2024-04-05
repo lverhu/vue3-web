@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { allResourceCategory, getAllResourceCategory } from '@/composables/useResourceCategory'
+import { allResourceCategory, getAllResourceCategory, handleDelete } from '@/composables/useResourceCategory'
 import { timeFormatter } from '@/utils/timeHandlers'
 import DlgResourceCategoryCreateOrEdit from './DlgResourceCategoryCreateOrEdit.vue'
 import { ref } from 'vue'
 
 getAllResourceCategory()
 const dlgCreateOrEdit = ref<InstanceType<typeof DlgResourceCategoryCreateOrEdit>>()
-const handleDelete = (id:number) => {
-  console.log('delete',id)
-}
+
 </script>
 
 <template>

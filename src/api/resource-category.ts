@@ -30,10 +30,19 @@ export const getAll = () => {
 type ResourceCategoryParams = Pick<ResourceCategory, 'name' | 'sort'> & { id?: number }
 
 //保存或更新资源分类
-export const saveOrderUpdate = (ResourceCategoryInfo:ResourceCategoryParams) => {
+export const saveOrderUpdate = (ResourceCategoryInfo: ResourceCategoryParams) => {
     return request<Common<boolean>>({
         method: 'POST',
         url: '/boss/resource/category/saveOrderUpdate',
         data: ResourceCategoryInfo,
     })
 }
+
+// 删除资源类别
+export const deleteCategory = (id: number) => {
+    return request<Common<boolean>>({
+        method: 'DELETE',
+        url: `/boss/resource/category/${id}`
+    })
+}
+
