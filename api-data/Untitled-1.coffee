@@ -200,3 +200,133 @@ export type MenuItem = {
     "mesg": "string",
     "time": "string"
 }
+
+
+{
+    "code": "000000",
+    "data": [
+        {
+            "createdBy": "system",
+            "createTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        },
+        {
+            "createdBy": "system",
+            "createdTime": "2021-05-19T01:44:08.000+0800",
+            "id": 1,
+            "name": "角色管理",
+            "operatorId": 1,
+            "selected": false,
+            "sort": 1,
+            "updatedBy": "system",
+            "updatedTime": "2021-05-19T01:44:08.000+0800"
+        }
+    ],
+    "mesg": "success",
+    "time": "2021-05-19T01:44:08.000+0800"
+}

@@ -1,11 +1,46 @@
 <script setup lang="ts">
+import { allResourceCategory, getAllResourceCategory } from '@/composables/useResourceCategory'
+import dayjs from 'dayjs'
 
+getAllResourceCategory()
+const timeFormatter = (row: any, column: any, value: string) => {
+  return dayjs(value).format('YYYY-MM-DD HH:mm:ss')
+}
 </script>
 
 <template>
-<h1>资源类别列表</h1>
+  <el-card class="box-card">
+    <template #header>
+      <div class="card-header">
+        <h3>资源类别列表</h3>
+        <el-button class="button" type="primary">创建类别</el-button>
+      </div>
+    </template>
+    <el-table :data="allResourceCategory" border style="width: 100%">
+      <el-table-column type="index" label="序号" align="center" />
+      <el-table-column prop="name" label="类别名称" align="center" />
+      <el-table-column
+        prop="createdTime"
+        label="创建时间"
+        align="center"
+        :formatter="timeFormatter"
+      />
+      <el-table-column prop="sort" label="排序" align="center" />
+      <el-table-column label="操作" align="center">
+        <el-button type="primary">编辑</el-button>
+        <el-button type="danger">删除</el-button>
+      </el-table-column>
+    </el-table>
+  </el-card>
 </template>
 
 <style lang="scss" scoped>
-
-</style>
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-card {
+  width: auto;
+}
+</style> 
