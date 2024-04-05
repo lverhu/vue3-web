@@ -1,11 +1,8 @@
 <script setup lang="ts">
 import { allResourceCategory, getAllResourceCategory } from '@/composables/useResourceCategory'
-import dayjs from 'dayjs'
+import { timeFormatter } from '@/utils/timeHandlers'
 
 getAllResourceCategory()
-const timeFormatter = (row: any, column: any, value: string) => {
-  return dayjs(value).format('YYYY-MM-DD HH:mm:ss')
-}
 </script>
 
 <template>
