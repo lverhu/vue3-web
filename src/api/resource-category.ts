@@ -26,3 +26,14 @@ export const getAll = () => {
         url: '/boss/resource/category/getAll',
     })
 }
+
+type ResourceCategoryParams = Pick<ResourceCategory, 'name' | 'sort'> & { id?: number }
+
+//保存或更新资源分类
+export const saveOrderUpdate = (ResourceCategoryInfo:ResourceCategoryParams) => {
+    return request<Common<boolean>>({
+        method: 'POST',
+        url: '/boss/resource/category/saveOrderUpdate',
+        data: ResourceCategoryInfo,
+    })
+}

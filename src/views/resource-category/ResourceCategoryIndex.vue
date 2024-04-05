@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import { allResourceCategory, getAllResourceCategory } from '@/composables/useResourceCategory'
 import { timeFormatter } from '@/utils/timeHandlers'
+import DlgResourceCategoryCreateOrEdit from './DlgResourceCategoryCreateOrEdit.vue'
+import { ref } from 'vue'
 
 getAllResourceCategory()
+const dlgCreateOrEdit = ref<InstanceType<typeof DlgResourceCategoryCreateOrEdit>>()
+const handleDelete = (id:number) => {
+  console.log('delete',id)
+}
 </script>
 
 <template>
@@ -10,7 +16,9 @@ getAllResourceCategory()
     <template #header>
       <div class="card-header">
         <h3>资源类别列表</h3>
-        <el-button class="button" type="primary">创建类别</el-button>
+        <el-button class="button" type="primary" @click="dlgCreateOrEdit?.initAndShow()"
+          >创建类别</el-button
+        >
       </div>
     </template>
     <el-table :data="allResourceCategory" border style="width: 100%">
@@ -23,11 +31,12 @@ getAllResourceCategory()
         :formatter="timeFormatter"
       />
       <el-table-column prop="sort" label="排序" align="center" />
-      <el-table-column label="操作" align="center">
+      <el-table-column label="操作" align="center" v-slot="{ row }">
         <el-button type="primary">编辑</el-button>
-        <el-button type="danger">删除</el-button>
+        <el-button type="danger" @click="handleDelete(row.id)">删除</el-button>
       </el-table-column>
     </el-table>
+    <DlgResourceCategoryCreateOrEdit ref="dlgCreateOrEdit"></DlgResourceCategoryCreateOrEdit>
   </el-card>
 </template>
 
