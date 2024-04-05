@@ -6,7 +6,8 @@ import {
   dialogFormVisible,
   isCreate,
   msgText,
-  form
+  form,
+  allResourceCategory
 } from '@/composables/useResourceCategory'
 
 const formLabelWidth = '140px'
@@ -17,6 +18,8 @@ const initAndShow = (id = 0) => {
   if (id) {
     isCreate.value = false
     msgText.value = '更新'
+    const resourceCategory = allResourceCategory.value.find((item) => item.id === id)
+    Object.assign(form, resourceCategory)
   } else {
     isCreate.value = true
     msgText.value = '创建'

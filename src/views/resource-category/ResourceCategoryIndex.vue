@@ -30,7 +30,7 @@ const dlgCreateOrEdit = ref<InstanceType<typeof DlgResourceCategoryCreateOrEdit>
       />
       <el-table-column prop="sort" label="排序" align="center" />
       <el-table-column label="操作" align="center" v-slot="{ row }">
-        <el-button type="primary">编辑</el-button>
+        <el-button type="primary" @click="dlgCreateOrEdit?.initAndShow(row.id)">编辑</el-button>
         <el-button type="danger" @click="handleDelete(row.id)">删除</el-button>
       </el-table-column>
     </el-table>
