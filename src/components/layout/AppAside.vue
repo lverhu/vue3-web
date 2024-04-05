@@ -44,6 +44,13 @@ import { isCollapse } from './menu-collapse'
           <span>用户管理</span>
         </el-menu-item>
 
+        <el-menu-item index="/products">
+          <el-icon>
+            <Setting />
+          </el-icon>
+          <span>产品管理</span>
+        </el-menu-item>
+
         <el-menu-item index="/course">
           <el-icon>
             <Setting />

@@ -9,7 +9,8 @@ const router = useRouter()
 
 const request = axios.create({
     // baseURL: import.meta.env.VITE_API_URL,
-    baseURL: "https://ff9a7eeb-54b2-40d6-9736-a5ece6acfecc.mock.pstmn.io/",
+    // baseURL: "https://ff9a7eeb-54b2-40d6-9736-a5ece6acfecc.mock.pstmn.io/",
+    baseURL: "http://127.0.0.1:8000/api/",
 })
 
 // 请求拦截器

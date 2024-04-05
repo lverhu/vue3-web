@@ -1,5 +1,4 @@
 import request from "@/utils/request";
-import MenuItem from "element-plus/es/components/menu/src/utils/menu-item.mjs";
 
 // 定义类型
 type Common<T> = {

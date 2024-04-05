@@ -39,6 +39,31 @@ const router = createRouter({
           component: () => import("@/views/menu/CreateOrEdit.vue")
         },
         {
+          path: '/products',
+          name: 'products',
+          component: () => import("@/views/product/ProductIndex.vue")
+        },
+        {
+          path: '/products/create',
+          name: 'product-create',
+          component: () => import("@/views/product/CreateOrEdit.vue")
+        },
+        {
+          path: '/products/:id/',
+          name: 'product-edit',
+          component: () => import("@/views/product/CreateOrEdit.vue")
+        },
+        {
+          path: '/testunits',
+          name: 'testunits',
+          component: () => import("@/views/testunit/TestUnitIndex.vue")
+        },
+        {
+          path: '/resource-category',
+          name: 'resource-category',
+          component: () => import("@/views/resource-category/ResourceCategoryIndex.vue")
+        },
+        {
           path: "/:xxx(.*)*",
           name: "ErrorPage",
           component: () => import("@/views/ErrorPage.vue"),
